@@ -1,6 +1,6 @@
 import requests
 import pandas as pd
-from wasserpegel.wasserpegel import Wasserpegel
+from wasserpegel.sachsen.wasserpegel import Wasserpegel
 
 class Wasserpegelapi:
     def __init__(self):

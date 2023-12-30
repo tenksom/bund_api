@@ -1,5 +1,6 @@
-from wasserpegel.wasserpegelapi import Wasserpegelapi
+from wasserpegel.sachsen.wasserpegelapi import Wasserpegelapi
 from time import sleep
+
 if __name__ == "__main__":
     wasserpegel = Wasserpegelapi()
     print("Getting data...")
