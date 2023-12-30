@@ -8,6 +8,6 @@ if __name__ == "__main__":
     #     print(autobahn.get_available_cameras(highway))
 
     wasserpegel = Wasserpegel()
-    wasserpegel.wasserpegelSpreeSchirgiswalde()
+    print(f"Wasserpegel: {wasserpegel.currentWasserpegelBautzen()}")
 
 
