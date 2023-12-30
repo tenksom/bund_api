@@ -1,0 +1,20 @@
+{
+  "Schirgiswalde": {
+    "Alarmstufe 1": 280,
+    "Alarmstufe 2": 320,
+    "Alarmstufe 3": 360,
+    "Alarmstufe 4": 440
+  },
+  "Bautzen": {
+    "Alarmstufe 1": 200,
+    "Alarmstufe 2": 260,
+    "Alarmstufe 3": 320,
+    "Alarmstufe 4": 380
+  },
+  "Dresden": {
+    "Alarmstufe 1": 400,
+    "Alarmstufe 2": 500,
+    "Alarmstufe 3": 600,
+    "Alarmstufe 4": 700
+  }
+}

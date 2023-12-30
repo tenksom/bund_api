@@ -7,9 +7,9 @@ if __name__ == "__main__":
     bautzen = wasserpegel.current_wasserpegel_bautzen()
     schirgiswalde = wasserpegel.current_wasserpegel_schirgiswalde()
     dresden = wasserpegel.current_wasserpegel_dresden()
-    print(f"Wasserpegel in Bautzen um {bautzen.time}: {bautzen.pegel}")
-    print(f"Wasserpegel in Schirgiswalde um {schirgiswalde.time}: {schirgiswalde.pegel}")
-    print(f"Wasserpegel in Dresden um {dresden.time}: {dresden.pegel}")
+    print(bautzen)
+    print(schirgiswalde)
+    print(dresden)
     print("-" * 40)
     booleans = [False, False, False]
     while True:
