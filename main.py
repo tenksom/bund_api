@@ -28,7 +28,7 @@ if __name__ == "__main__":
             dresden = dresden_updated
             print(dresden)
             booleans[2] = True
-        if (booleans[0] and booleans[1] and booleans[2]):
+        if booleans[0] and booleans[1] and booleans[2]:
             print("-" * 40)
             booleans = [False, False, False]
         sleep(60)
