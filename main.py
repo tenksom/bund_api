@@ -2,9 +2,11 @@ from wasserpegel.wasserpegelapi import WasserpegelAPI
 
 if __name__ == "__main__":
     wasserpegel = WasserpegelAPI()
-    bautzen = wasserpegel.currentWasserpegelBautzen()
+    bautzen = wasserpegel.current_wasserpegel_bautzen()
     print(f"Wasserpegel in Bautzen um {bautzen.time}: {bautzen.pegel}")
-    schirgiswalde = wasserpegel.currentWasserpegelSpreeSchirgiswalde()
+
+    schirgiswalde = wasserpegel.current_wasserpegel_schirgiswalde()
     print(f"Wasserpegel in Schirgiswalde um {schirgiswalde.time}: {schirgiswalde.pegel}")
-    dresden = wasserpegel.currentWasserpegelDresden()
+
+    dresden = wasserpegel.current_wasserpegel_dresden()
     print(f"Wasserpegel in Dresden um {dresden.time}: {dresden.pegel}")

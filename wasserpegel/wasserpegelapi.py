@@ -14,11 +14,11 @@ class WasserpegelAPI:
 
         return Wasserpegel(df_list[0].iloc[0])
 
-    def currentWasserpegelSpreeSchirgiswalde(self) -> int:
+    def current_wasserpegel_schirgiswalde(self) -> Wasserpegel:
         return self.getWasserpegel(self.schirgiswalde)
 
-    def currentWasserpegelBautzen(self) -> int:
+    def current_wasserpegel_bautzen(self) -> Wasserpegel:
         return self.getWasserpegel(self.bautzen)
 
-    def currentWasserpegelDresden(self) -> int:
+    def current_wasserpegel_dresden(self) -> Wasserpegel:
         return self.getWasserpegel(self.dresden)
