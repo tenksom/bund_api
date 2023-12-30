@@ -1,4 +1,4 @@
-from wasserpegelapi import WasserpegelAPI
+from wasserpegel.wasserpegelapi import WasserpegelAPI
 
 if __name__ == "__main__":
     wasserpegel = WasserpegelAPI()

@@ -1,6 +1,6 @@
 import requests
 import pandas as pd
-
+from wasserpegel.wasserpegel import Wasserpegel
 
 class WasserpegelAPI:
     def __init__(self):
@@ -22,8 +22,3 @@ class WasserpegelAPI:
 
     def currentWasserpegelDresden(self) -> int:
         return self.getWasserpegel(self.dresden)
-
-class Wasserpegel:
-    def __init__(self, dataframe):
-        self.time = dataframe['Zeitpunkt']
-        self.pegel = dataframe['W']
