@@ -1,7 +1,7 @@
-from wasserpegel.wasserpegelapi import WasserpegelAPI
+from wasserpegel.wasserpegelapi import Wasserpegelapi
 
 if __name__ == "__main__":
-    wasserpegel = WasserpegelAPI()
+    wasserpegel = Wasserpegelapi()
     bautzen = wasserpegel.current_wasserpegel_bautzen()
     print(f"Wasserpegel in Bautzen um {bautzen.time}: {bautzen.pegel}")
 
