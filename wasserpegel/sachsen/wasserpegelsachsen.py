@@ -12,7 +12,7 @@ class WasserpegelSachsen:
     def get_wasserpegel(self, name):
         try:
             for place in self.places:
-                if place == name.lower():
+                if place.lower() == name.lower():
                     html = requests.get(self.places[place]["url"]).content
                     df_list = pd.read_html(html)
                     return Wasserpegel(place, df_list[0].iloc[0])
