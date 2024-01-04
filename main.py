@@ -1,11 +1,11 @@
 from requests import Request
 
-from wasserpegel.sachsen.wasserpegelapi import Wasserpegelapi
+from wasserpegel.sachsen.wasserpegelsachsen import WasserpegelSachsen
 from time import sleep
 from fastapi import FastAPI
 
 app = FastAPI()
-wasserpegel = Wasserpegelapi()
+wasserpegel = WasserpegelSachsen()
 
 
 @app.get("/wasserstand/sachsen/{place}")
@@ -14,7 +14,6 @@ async def get_water_level(place: str):
 
 
 if __name__ == "__main__":
-
     print("Getting data...")
     places = ["bautzen", "schirgiswalde", "dresden"]
     bautzen = wasserpegel.get_wasserpegel(places[0])

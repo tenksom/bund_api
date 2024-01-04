@@ -1,0 +1,41 @@
+{
+  "schirgiswalde": {
+    "url": "https://www.umwelt.sachsen.de/umwelt/infosysteme/hwims/portal/web/wasserstand-pegel-582010",
+    "alarms": {
+      "Alarmstufe 1": 280,
+      "Alarmstufe 2": 320,
+      "Alarmstufe 3": 360,
+      "Alarmstufe 4": 440
+    }
+  },
+  "bautzen": {
+    "url": "https://www.umwelt.sachsen.de/umwelt/infosysteme/hwims/portal/web/wasserstand-pegel-10000100",
+    "alarms": {
+      "Alarmstufe 1": 200,
+      "Alarmstufe 2": 260,
+      "Alarmstufe 3": 320,
+      "Alarmstufe 4": 380
+    }
+  },
+  "dresden": {
+    "url": "https://www.umwelt.sachsen.de/umwelt/infosysteme/hwims/portal/web/wasserstand-pegel-501060",
+    "alarms": {
+      "Alarmstufe 1": 400,
+      "Alarmstufe 2": 500,
+      "Alarmstufe 3": 600,
+      "Alarmstufe 4": 700
+    }
+  },
+  "lieske": {
+    "url": "https://www.umwelt.sachsen.de/umwelt/infosysteme/hwims/portal/web/wasserstand-pegel-582060",
+    "alarms": {
+      "Alarmstufe 1": 350,
+      "Alarmstufe 2": 400,
+      "Alarmstufe 3": 500,
+      "Alarmstufe 4": 600
+    }
+  },
+  "sprey": {
+    "url": "https://www.umwelt.sachsen.de/umwelt/infosysteme/hwims/portal/web/wasserstand-pegel-582080"
+  }
+}
