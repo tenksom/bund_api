@@ -1,29 +1,42 @@
+from requests import Request
+
 from wasserpegel.sachsen.wasserpegelapi import Wasserpegelapi
 from time import sleep
+from fastapi import FastAPI
+
+app = FastAPI()
+wasserpegel = Wasserpegelapi()
+
+
+@app.get("/wasserstand/sachsen/{place}")
+async def get_water_level(place: str):
+    return {"data": wasserpegel.get_wasserpegel(place)}
+
 
 if __name__ == "__main__":
-    wasserpegel = Wasserpegelapi()
+
     print("Getting data...")
-    bautzen = wasserpegel.current_wasserpegel_bautzen()
-    schirgiswalde = wasserpegel.current_wasserpegel_schirgiswalde()
-    dresden = wasserpegel.current_wasserpegel_dresden()
+    places = ["bautzen", "schirgiswalde", "dresden"]
+    bautzen = wasserpegel.get_wasserpegel(places[0])
+    schirgiswalde = wasserpegel.get_wasserpegel(places[1])
+    dresden = wasserpegel.get_wasserpegel(places[2])
     print(bautzen)
     print(schirgiswalde)
     print(dresden)
     print("-" * 40)
     booleans = [False, False, False]
     while True:
-        bautzen_updated = wasserpegel.current_wasserpegel_bautzen()
+        bautzen_updated = wasserpegel.get_wasserpegel(places[0])
         if bautzen != bautzen_updated:
             bautzen = bautzen_updated
             print(bautzen)
             booleans[0] = True
-        schirgiswalde_updated = wasserpegel.current_wasserpegel_schirgiswalde()
+        schirgiswalde_updated = wasserpegel.get_wasserpegel(places[1])
         if schirgiswalde != schirgiswalde_updated:
             schirgiswalde = schirgiswalde_updated
             print(schirgiswalde)
             booleans[1] = True
-        dresden_updated = wasserpegel.current_wasserpegel_dresden()
+        dresden_updated = wasserpegel.get_wasserpegel(places[2])
         if dresden != dresden_updated:
             dresden = dresden_updated
             print(dresden)

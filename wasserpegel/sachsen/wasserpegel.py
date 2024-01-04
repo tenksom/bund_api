@@ -22,7 +22,7 @@ class Wasserpegel:
         if self.pegel == "k.A.":
             return "can not get warnlevel"
         data = json.loads(open("./wasserpegel/sachsen/alarmstufen.json", "r").read())
-        for alarm in data[self.name]:
-            if data[self.name][alarm] < int(self.pegel):
+        for alarm in data[self.name.lower()]:
+            if data[self.name.lower()][alarm] < int(self.pegel):
                 return alarm
         return "Normal"
