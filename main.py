@@ -13,6 +13,11 @@ async def get_water_level(place: str):
     return {"data": wasserpegel.get_wasserpegel(place)}
 
 
+@app.get("/wasserstand/sachsen/places/all")
+async def get_places():
+    return {"places": wasserpegel.get_places()}
+
+
 if __name__ == "__main__":
     print("Getting data...")
     places = ["bautzen", "schirgiswalde", "dresden"]

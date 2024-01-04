@@ -49,5 +49,23 @@
   },
   "Hohberg": {
     "url": "https://www.umwelt.sachsen.de/umwelt/infosysteme/hwims/portal/web/wasserstand-pegel-1000000"
+  },
+  "Großschweidnitz":{
+    "url": "https://www.umwelt.sachsen.de/umwelt/infosysteme/hwims/portal/web/wasserstand-pegel-583090",
+    "alarms": {
+      "Alarmstufe 1": 90,
+      "Alarmstufe 2": 120,
+      "Alarmstufe 3": 150,
+      "Alarmstufe 4": 210
+    }
+  },
+  "Gröditz 2": {
+    "url": "https://www.umwelt.sachsen.de/umwelt/infosysteme/hwims/portal/web/wasserstand-pegel-583122",
+    "alarms": {
+      "Alarmstufe 1": 190,
+      "Alarmstufe 2": 230,
+      "Alarmstufe 3": 310,
+      "Alarmstufe 4": 390
+    }
   }
 }

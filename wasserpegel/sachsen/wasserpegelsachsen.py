@@ -19,4 +19,9 @@ class WasserpegelSachsen:
         except KeyError:
             return "no such place"
 
+    def get_places(self):
+        places = []
+        for place in self.places:
+            places.append(place)
+        return places
 
