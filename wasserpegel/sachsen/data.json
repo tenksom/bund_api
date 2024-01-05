@@ -106,5 +106,14 @@
       "Alarmstufe 3": 740,
       "Alarmstufe 4": 780
     }
+  },
+  "Schönau": {
+    "url": "https://www.umwelt.sachsen.de/umwelt/infosysteme/hwims/portal/web/wasserstand-pegel-501010",
+    "alarms": {
+      "Alarmstufe 1": 400,
+      "Alarmstufe 2": 500,
+      "Alarmstufe 3": 600,
+      "Alarmstufe 4": 750
+    }
   }
 }
