@@ -1,6 +1,6 @@
 # Bund API
 
-This little python library is able to request open data from the Bund.
+This API should bring easy access to data, which is sometimes really interesting, but not really easy accessible.
 
 Currently it is in development and only the wasserpegel api is working.
 

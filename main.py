@@ -15,14 +15,14 @@ async def get_water_level(place: str):
         return {"data": "not a location"}
 
 
-@app.get("/wasserstand/sachsen/{place}/{waters}")
-async def get_water_level(place: str, waters: str):
-    return f"Works {place} {waters}!"
-
-
 @app.get("/wasserstand/sachsen/places/all")
 async def get_places():
     return {"places": wasserpegel.get_places()}
+
+
+@app.get("/wasserstand/sachsen/{place}/{waters}")
+async def get_water_level(place: str, waters: str):
+    return f"Works {place} {waters}!"
 
 
 if __name__ == "__main__":
