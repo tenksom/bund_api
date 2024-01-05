@@ -16,7 +16,7 @@ async def get_water_level(place: str):
 
 
 @app.get("/wasserstand/sachsen/{place}/{waters}")
-async def get_water_levelg(place: str, waters: str):
+async def get_water_level(place: str, waters: str):
     return f"Works {place} {waters}!"
 
 
