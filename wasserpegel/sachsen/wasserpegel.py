@@ -23,10 +23,12 @@ class Wasserpegel:
             return "can not get warnlevel"
         data = json.loads(open("./wasserpegel/sachsen/data.json", "r").read())
         try:
+            last_alarm = "Normal"
             for alarm in data[self.name]["alarms"]:
-                if data[self.name]["alarms"][alarm] < int(self.pegel):
-                    return alarm
-            return "Normal"
+                if data[self.name]["alarms"][alarm] > int(self.pegel):
+                    return last_alarm
+                last_alarm = alarm
+            return last_alarm
         except KeyError as e:
             return f"no warnlevel provided"
 

@@ -1,5 +1,3 @@
-from requests import Request
-
 from wasserpegel.sachsen.wasserpegelsachsen import WasserpegelSachsen
 from time import sleep
 from fastapi import FastAPI
@@ -10,7 +8,11 @@ wasserpegel = WasserpegelSachsen()
 
 @app.get("/wasserstand/sachsen/{place}")
 async def get_water_level(place: str):
-    return {"data": wasserpegel.get_wasserpegel(place).get_as_json()}
+    result = wasserpegel.get_wasserpegel(place)
+    if result is not None:
+        return result.get_as_json()
+    else:
+        return {"data": "not a location"}
 
 
 @app.get("/wasserstand/sachsen/places/all")

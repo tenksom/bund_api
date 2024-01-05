@@ -79,5 +79,32 @@
       "Alarmstufe 3": 170,
       "Alarmstufe 4": 200
     }
+  },
+  "Pirna": {
+    "url": "https://www.umwelt.sachsen.de/umwelt/infosysteme/hwims/portal/web/wasserstand-pegel-501040"
+  },
+  "Meißen": {
+    "url": "https://www.umwelt.sachsen.de/umwelt/infosysteme/hwims/portal/web/wasserstand-pegel-501040"
+  },
+  "Riesa": {
+    "url": "https://www.umwelt.sachsen.de/umwelt/infosysteme/hwims/portal/web/wasserstand-pegel-501110",
+    "alarms": {
+      "Alarmstufe 1": 480,
+      "Alarmstufe 2": 600,
+      "Alarmstufe 3": 680,
+      "Alarmstufe 4": 760
+    }
+  },
+  "Mühlberg": {
+    "url": "https://www.umwelt.sachsen.de/umwelt/infosysteme/hwims/portal/web/wasserstand-pegel-10001180"
+  },
+  "Torgau": {
+    "url": "https://www.umwelt.sachsen.de/umwelt/infosysteme/hwims/portal/web/wasserstand-pegel-501261",
+    "alarms": {
+      "Alarmstufe 1": 580,
+      "Alarmstufe 2": 660,
+      "Alarmstufe 3": 740,
+      "Alarmstufe 4": 780
+    }
   }
 }
