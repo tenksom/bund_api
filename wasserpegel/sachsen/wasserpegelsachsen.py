@@ -14,7 +14,7 @@ class WasserpegelSachsen:
                 if place.lower() == name.lower():
                     html = requests.get(self.places[place]["url"]).content
                     df_list = pd.read_html(html)
-                    return Wasserpegel(place, df_list[0].iloc[0])
+                    return Wasserpegel(place, df_list[0])
         except KeyError:
             return "no such place"
 

@@ -3,6 +3,8 @@ import json
 class Wasserpegel:
     def __init__(self, name, dataframe):
         self.name = name
+        self.dataframe = dataframe
+        dataframe = dataframe.iloc[0]
         self.time = dataframe['Zeitpunkt']
         self.pegel = dataframe['W']
         try:
@@ -34,3 +36,8 @@ class Wasserpegel:
 
     def get_as_json(self):
         return {"name": self.name, "time": self.time, "pegel": self.pegel, "warnlevel": self.get_warnlevel()}
+
+    def get_all_data(self):
+        result = {"name": self.name, "data": {}}
+        result["data"] = json.loads(self.dataframe.to_json(orient="records"))
+        return result

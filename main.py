@@ -20,6 +20,15 @@ async def get_places():
     return {"places": wasserpegel.get_places()}
 
 
+@app.get("/wasserstand/sachsen/{place}/all")
+async def get_all_data_from_place(place: str):
+    result = wasserpegel.get_wasserpegel(place)
+    if result is not None:
+        return result.get_all_data()
+    else:
+        return {"data": "not a location"}
+
+
 @app.get("/wasserstand/sachsen/{place}/{waters}")
 async def get_water_level(place: str, waters: str):
     return f"Works {place} {waters}!"
