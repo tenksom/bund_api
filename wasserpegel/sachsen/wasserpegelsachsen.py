@@ -1,5 +1,4 @@
 import json
-
 import requests
 import pandas as pd
 from wasserpegel.sachsen.wasserpegel import Wasserpegel
