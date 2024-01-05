@@ -67,5 +67,17 @@
       "Alarmstufe 3": 310,
       "Alarmstufe 4": 390
     }
+  },
+  "Ebersbach": {
+    "url": "https://www.umwelt.sachsen.de/umwelt/infosysteme/hwims/portal/web/wasserstand-pegel-582000"
+  },
+  "Neusalza-Spremberg": {
+    "url": "https://www.umwelt.sachsen.de/umwelt/infosysteme/hwims/portal/web/wasserstand-pegel-10000960",
+    "alarms": {
+      "Alarmstufe 1": 110,
+      "Alarmstufe 2": 140,
+      "Alarmstufe 3": 170,
+      "Alarmstufe 4": 200
+    }
   }
 }

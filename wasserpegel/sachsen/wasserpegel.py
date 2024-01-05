@@ -29,3 +29,6 @@ class Wasserpegel:
             return "Normal"
         except KeyError as e:
             return f"no warnlevel provided"
+
+    def get_as_json(self):
+        return {"name": self.name, "time": self.time, "pegel": self.pegel, "warnlevel": self.get_warnlevel()}

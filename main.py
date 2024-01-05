@@ -10,7 +10,7 @@ wasserpegel = WasserpegelSachsen()
 
 @app.get("/wasserstand/sachsen/{place}")
 async def get_water_level(place: str):
-    return {"data": wasserpegel.get_wasserpegel(place)}
+    return {"data": wasserpegel.get_wasserpegel(place).get_as_json()}
 
 
 @app.get("/wasserstand/sachsen/places/all")
