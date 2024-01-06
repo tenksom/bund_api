@@ -8,7 +8,7 @@ class WasserpegelSachsen:
     def __init__(self):
         self.places = json.loads(open("./wasserpegel/sachsen/data.json", "r").read())
 
-    def get_wasserpegel(self, name):
+    def get_wasserpegel(self, name) -> Wasserpegel | str:
         try:
             for place in self.places:
                 if place.lower() == name.lower():
@@ -18,7 +18,7 @@ class WasserpegelSachsen:
         except KeyError:
             return "no such place"
 
-    def get_places(self):
+    def get_places(self) -> list:
         places = []
         for place in self.places:
             places.append(place)
