@@ -1,9 +1,20 @@
+from starlette.responses import JSONResponse
+
 from wasserpegel.sachsen.wasserpegelsachsen import WasserpegelSachsen
 from time import sleep
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException, Request
+from fastapi.responses import RedirectResponse
+import starlette.status as status
 
-app = FastAPI()
+app = FastAPI(redoc_url=None)
 wasserpegel = WasserpegelSachsen()
+
+
+
+
+@app.get("/")
+async def redirect_to_docs():
+    return RedirectResponse("/docs", status_code=status.HTTP_302_FOUND)
 
 
 @app.get("/wasserstand/sachsen/{place}")
@@ -12,7 +23,7 @@ async def get_water_level(place: str):
     if result is not None:
         return result.get_as_json()
     else:
-        return {"data": "not a location"}
+        raise HTTPException(status_code=404, detail="No such place")
 
 
 @app.get("/wasserstand/sachsen/places/all")
@@ -26,12 +37,20 @@ async def get_all_data_from_place(place: str):
     if result is not None:
         return result.get_all_data()
     else:
-        return {"data": "not a location"}
+        raise HTTPException(status_code=404, detail="No such place", headers={"X-Error": "There goes my error"})
 
 
 @app.get("/wasserstand/sachsen/{place}/{waters}")
 async def get_water_level(place: str, waters: str):
     return f"Works {place} {waters}!"
+
+
+@app.exception_handler(404)
+def not_found_handler(request: Request, exc: HTTPException):
+    return JSONResponse(
+        status_code=404,
+        content={"message": "The requested source was not found"}
+    )
 
 
 if __name__ == "__main__":
