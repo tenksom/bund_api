@@ -1,15 +1,14 @@
 from starlette.responses import JSONResponse
-from wasserpegel.sachsen.wasserpegelsachsen import WasserpegelSachsen
+import wasserpegel.sachsen.wasserpegelsachsen as wasserpegel_sachsen
 from fastapi import FastAPI, HTTPException, Request
 from tools.cli_tool import cli_tool
 
 app = FastAPI(redoc_url=None, docs_url="/")
-wasserpegel = WasserpegelSachsen()
 
 
 @app.get("/wasserstand/sachsen/{place}")
 async def get_water_level(place: str):
-    result = wasserpegel.get_wasserpegel(place)
+    result = wasserpegel_sachsen.get_wasserpegel(place)
     if result is not None:
         return result.get_as_json()
     else:
@@ -18,12 +17,12 @@ async def get_water_level(place: str):
 
 @app.get("/wasserstand/sachsen/places/all")
 async def get_places():
-    return {"places": wasserpegel.get_places()}
+    return {"places": wasserpegel_sachsen.get_places()}
 
 
 @app.get("/wasserstand/sachsen/{place}/all")
 async def get_all_data_from_place(place: str):
-    result = wasserpegel.get_wasserpegel(place)
+    result = wasserpegel_sachsen.get_wasserpegel(place)
     if result is not None:
         return result.get_all_data()
     else:
