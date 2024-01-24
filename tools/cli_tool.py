@@ -1,6 +1,6 @@
 from time import sleep
 
-from wasserpegel.sachsen import wasserpegel
+from wasserpegel import wasserpegel
 
 
 def cli_tool():

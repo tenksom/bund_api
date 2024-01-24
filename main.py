@@ -1,7 +1,7 @@
 from starlette.responses import JSONResponse
 from wasserpegel.sachsen.wasserpegelsachsen import WasserpegelSachsen
 from fastapi import FastAPI, HTTPException, Request
-from cli_tool import cli_tool
+from tools.cli_tool import cli_tool
 
 app = FastAPI(redoc_url=None, docs_url="/")
 wasserpegel = WasserpegelSachsen()

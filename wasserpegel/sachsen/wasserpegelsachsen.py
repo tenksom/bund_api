@@ -1,12 +1,13 @@
 import json
 import requests
 import pandas as pd
-from wasserpegel.sachsen.wasserpegel import Wasserpegel
+from wasserpegel.wasserpegel import Wasserpegel
 
 
 class WasserpegelSachsen:
     def __init__(self):
-        self.places = json.loads(open("./wasserpegel/sachsen/data.json", "r").read())
+        with open("./wasserpegel/sachsen/data.json", "r") as file:
+            self.places = json.loads(file.read())
 
     def get_wasserpegel(self, name) -> Wasserpegel | str:
         try:
