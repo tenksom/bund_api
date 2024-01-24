@@ -4,6 +4,12 @@ This API should bring easy access to data, which is sometimes really interesting
 
 Currently it is in development and only the wasserpegel api is working.
 
+Run
+```
+python pip install -r requirements.txt
+gunicorn -k uvicorn.workers.UvicornWorker main:app --bind=0.0.0.0
+```
+
 ## Autobahn api
 This part of the api is currently not implemented, but it will be able to view current statuses of the autobahn
 
