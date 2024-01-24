@@ -18,5 +18,5 @@ Wasserpegel api is able to view the latest waterlevels of selected rivers at sel
 In the future, this will be for all rivers in Germany and dynamic, currently it is statically implemented.
 
 ## TODO's
-[ ] Wasserpegel für alle in Sachsen verfügbaren Messstellen
-[ ] Erweiterung auf benachbarte Länder von Sachsen
+- [ ] Wasserpegel für alle in Sachsen verfügbaren Messstellen
+- [ ] Erweiterung auf benachbarte Länder von Sachsen
