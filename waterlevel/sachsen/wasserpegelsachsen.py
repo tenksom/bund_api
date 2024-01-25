@@ -1,9 +1,9 @@
 import json
 import requests
 import pandas as pd
-from wasserpegel.wasserpegel import Wasserpegel
+from waterlevel.wasserpegel import Wasserpegel
 
-with open("./wasserpegel/sachsen/data.json", "r") as file:
+with open("./waterlevel/sachsen/places.json", "r") as file:
     places = json.loads(file.read())
 
 

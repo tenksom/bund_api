@@ -1,5 +1,5 @@
 from starlette.responses import JSONResponse
-import wasserpegel.sachsen.wasserpegelsachsen as wasserpegel_sachsen
+import waterlevel.sachsen.wasserpegelsachsen as wasserpegel_sachsen
 from fastapi import FastAPI, HTTPException, Request
 from tools.cli_tool import cli_tool
 

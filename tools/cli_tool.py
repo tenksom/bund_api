@@ -1,5 +1,5 @@
 from time import sleep
-import wasserpegel.sachsen.wasserpegelsachsen as wasserpegel_sachsen
+import waterlevel.sachsen.wasserpegelsachsen as wasserpegel_sachsen
 
 def cli_tool():
     print("Getting data...")
